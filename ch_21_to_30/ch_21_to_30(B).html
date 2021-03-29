@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+
+<script>
+
+    // input value from user in String var inputValue="cloUd naTive computinG"
+
+    var inputValue = prompt("Enter a Course Name?", "cloUd naTive computinG");
+
+
+    // Convert every first letter of the content in Capitalize case. inputValue="Cloud Native Computing"
+    
+    inputValue = inputValue.toLowerCase();
+    alert(inputValue);
+    
+   
+    const words = inputValue.split(" ");
+    for (let i = 0; i < words.length; i++) {
+
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        
+    }
+    
+    // print value in console.log() console.log(inputValue) | check result in browser console
+    var x = document.getElementById("demo");
+    x.innerHTML = words.join(" ")
+    console.log(words.join(" "));
+
+    </script>
+</html>       

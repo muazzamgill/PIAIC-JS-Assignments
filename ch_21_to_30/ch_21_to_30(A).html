@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    // Take a input from user in number with decimal point user input is 3.4
+    var number = prompt("Enter a number with decimal point?", 3.4);
+    var floatingNumber = parseFloat(number);
+    // Convert it into greater number Example: Math.ceil(3.4); to 4
+    Math.ceil(floatingNumber);
+
+    // Declear a variable of string and assign some text var text="This is my dummy text"
+    var text="This is my dummy text";
+
+    // Slice the text into a new variable from 0 to the rounded number 0 to 4; Example: text.slice(0, 4) | sliceText = This
+    sliceText = text.slice(0, 4);
+    
+
+    // Use for loop and concatination to reverse the sliced string; 0==>4 ==> This ===> shiT
+    var myarr = [];
+    for (var i = 0; i <= 3; i++) {
+        var j = i + 1
+        var oneChar = sliceText.slice(i,j)
+        myarr[i] = oneChar;
+    
+    }
+
+    // print value in alert "shiT"
+    alert(myarr[3]+ myarr[1]+ myarr[2]+ myarr[0]);
+
+    </script>
+</head>
+<body>
+</body>
+</html>       

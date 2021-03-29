@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    // Create an empty array with the name is courses. ```example: var courses=[] ``
+    
+    var courses = [];
+    
+    // Get the 5-course name from the user, example: var course1 =prompt("course 1", "computer") and save all 5 value in "courses" array. example: courses.push(course1)
+
+    var course1Value = prompt("Enter a Course Name of 1st Course?", "Eniglish");
+    var course2Value = prompt("Enter a Course Name of 2nd Course?", "Urdu");
+    var course3Value = prompt("Enter a Course Name of 3rd Course?", "Math");
+    var course4Value = prompt("Enter a Course Name of 4th Course?", "Computer");
+    var course5Value = prompt("Enter a Course Name of 5th Course?", "Physics");
+
+    courses.push(course1Value);
+    courses.push(course2Value);
+    courses.push(course3Value);
+    courses.push(course4Value);
+    courses.push(course5Value);
+
+    // print courses array in alertexample: alert(courses)
+
+    alert(courses);
+
+    // print all full 5-course name one by one in prompt. example: course1=prompt(course1, course1Value)
+
+    for (var i = 0; i <= 4; i++) {
+        var chk = prompt("You have Enter: ", courses[i]);
+
+    // If the user edit any value (through prompt), then that value is edit in the array. example: course1=prompt(course1, course1ValueEdit) use Array.splice() to replace and edit index in array
+
+        if(chk != courses[i])
+        {
+            courses[i] = chk
+        }
+    }
+
+
+    // print courses array in alertexample: alert(courses)
+    alert(courses);
+    </script>
+</head>
+<body>
+</body>
+</html>       

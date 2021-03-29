@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    // input your name through prompt. for example name is "Ameen Alam"
+
+    var name = prompt("Enter a Your Name?", "Ameen Alam");
+
+    // input your DOB(date) through prompt. for example date is "24"
+
+    var date = prompt("Enter a Your DOB(date)?", "24");
+
+    // input your DOB(month) through prompt. for example month is "05"
+
+    var month = prompt("Enter a Your DOB(month)?", "05");
+
+    // input your DOB(year) through prompt. for example year is "1999"
+    
+    var year = prompt("Enter a Your DOB(year)?", "1999");
+
+
+
+    // print meassage in console.log() "Hello Ameen Alam, Good Morning, AfterNoon, Evening or Night"
+
+    var d = new Date();
+    var time = d.getHours();
+
+    if (time < 12) {
+        console.log("Hello "+ name +" , "+  "Good Morning!")    
+    }
+    else if (time == 12) {
+        console.log("Hello "+ name +" , "+  "Good AfterNoon!")    
+    }
+    else if (time > 18) {
+        console.log("Hello "+ name +" , "+  "Good Evening!")    
+    }
+    
+
+    // print meassage in console.log() "Your DOB is {in pakistan standard time format}"
+    var mydate = month+"-"+date+"-"+year;
+    
+    console.log("Your date of birth is " + Date(mydate));
+
+
+    // print meassage in console.log() "You are 20 years 7 Month 10 Days 19 Hours 20 Minutes 25 Seconds old
+
+
+    var periods = {
+        year:   12 * 30 * 24 * 60 * 60 * 1000,
+        month:  30 * 24 * 60 * 60 * 1000,
+        day:    24 * 60 * 60 * 1000,
+        hour:   60 * 60 * 1000,
+        minute: 60 * 1000,
+        second: 1000,
+    };
+
+    diff   = new Date() - new Date(mydate);
+
+    totalyrs = Math.floor(diff / periods.year);
+    remaining_mili = diff - (totalyrs * periods.year);
+
+    totalmnths =  Math.floor(remaining_mili / periods.month);
+    remaining_mili = remaining_mili - (totalmnths * periods.month);
+
+    totaldays =  Math.floor(remaining_mili / periods.day);
+    remaining_mili = remaining_mili - (totaldays * periods.day);
+
+    totalhours =  Math.floor(remaining_mili / periods.hour);
+    remaining_mili = remaining_mili - (totalhours * periods.hour);
+
+    totalminutes =  Math.floor(remaining_mili / periods.minute);
+    remaining_mili = remaining_mili - (totalminutes * periods.minute);
+    
+    totalseconds =  Math.floor(remaining_mili / periods.second);
+
+   var message = "You are "+totalyrs+" years "+totalmnths+" Month "+totaldays+" days,"+totalhours+" Hours "+totalminutes+" Miniute "+totalseconds+" Seconds old";
+
+   console.log(message);
+
+
+    // "Your Age in Days 7510"
+
+
+    Math.floor(diff / periods.day);
+    console.log("Your Age in Days "+Math.floor(diff / periods.day));
+
+    // print meassage in console.log() "How much time left in your next birthday? 161 days 4 hours 39 minutes 34 seconds" or "happy Birth 
+    
+    if((parseInt(d.getMonth())+1) > month.replace(/^0+/, ''))
+    {
+        endYear = parseInt(d.getFullYear())+1;
+
+    }
+    else{
+        endYear = parseInt(d.getFullYear());
+
+    }
+
+    endDate = month+"-"+date+"-"+endYear;
+    startDate = d;
+  
+         diff   = new Date(endDate) - startDate;
+
+
+    totaldays =  Math.floor(diff / periods.day);
+    remaining_mili = diff - (totaldays * periods.day);
+
+    totalhours =  Math.floor(remaining_mili / periods.hour);
+    remaining_mili = remaining_mili - (totalhours * periods.hour);
+
+    totalminutes =  Math.floor(remaining_mili / periods.minute);
+    remaining_mili = remaining_mili - (totalminutes * periods.minute);
+    
+    totalseconds =  Math.floor(remaining_mili / periods.second);
+
+   var message = totaldays+" days,"+totalhours+" hrs,"+totalminutes+" min,"+totalseconds+" seconds";
+
+   console.log("Your Birthday is "+message+ "Away and Get ready for Celebrations!");
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>       

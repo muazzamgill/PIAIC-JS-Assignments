@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // input value from user in String var inputValue="cloUd naTive computinG"
+
+        var inputValue = "cloUd naTive computinG"
+
+        // Convert every first letter of the content in Capitalize case. inputValue="Cloud Native Computing" use Function
+
+        function convertFirstLetter() {
+            inputValue = inputValue.toLowerCase();
+            console.log(inputValue)
+            const words = inputValue.split(" ");
+            for (let i = 0; i < words.length; i++) {
+
+                words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+
+            }
+
+            return words.join(" ");
+
+        }
+
+        //print value in console.log() console.log(inputValue) | check result in browser console
+        console.log(convertFirstLetter());
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

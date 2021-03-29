@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    // Get the 5-course number from the userfor example course1 is 70 var totalMarks = 500
+
+    var obtainMarks1 = prompt("Enter a Marks from 1st Course?", 50);
+    var obtainMarks2 = prompt("Enter a Marks from 2nd Course?", 60);
+    var obtainMarks3 = prompt("Enter a Marks from 3rd Course?", 60);
+    var obtainMarks4 = prompt("Enter a Marks from 4th Course?", 60);
+    var obtainMarks5 = prompt("Enter a Marks from 5th Course?", 60);
+
+
+    var  totalMarks = 500
+
+    var obtainedMarks = parseInt(obtainMarks1) + 
+                        parseInt(obtainMarks2) + 
+                        parseInt(obtainMarks3) + 
+                        parseInt(obtainMarks4) + 
+                        parseInt(obtainMarks5)
+
+    // Calculate the total percentage formula: obtainedMarks * 100/ totalMarks
+
+    var totalPercentage = obtainedMarks * 100 / totalMarks
+
+    // print output in alert.
+    alert("You have obatined "+ obtainedMarks + "total in 5 courses as (" 
+    + obtainMarks1 +", "
+    + obtainMarks2 +", "
+    + obtainMarks3 +", "
+    + obtainMarks4 +", "
+    + obtainMarks5 +" )" + " and your Percentage is " + totalPercentage
+    )
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>       
